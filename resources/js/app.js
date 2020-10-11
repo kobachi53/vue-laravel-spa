@@ -2,6 +2,7 @@ import HeaderComponent from "./components/HeaderComponent";
 import VueRouter from 'vue-router';
 import TaskListComponent from "./components/TaskListComponent";
 import TaskShowComponent from "./components/TaskShowComponent";
+import TaskCreateComponent from "./components/TaskCreateComponent";
 
 require('./bootstrap');
 
@@ -26,6 +27,12 @@ const router = new VueRouter({
             name: 'task.show',
             component: TaskShowComponent,
             props: true
+        },
+        // タスク登録
+        {
+            path: '/tasks/create',
+            name: 'task.create',
+            component: TaskCreateComponent
         },
     ]
 });
